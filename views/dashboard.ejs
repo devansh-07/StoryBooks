@@ -1,17 +1,21 @@
 <div class="mx-0">
-    <div class="row p-0">
-        <div class="col">
-            <h3>Welcome <%= name %></h3>
-            <h4>My Stories</h4>
-        </div>
-        <div class="col-auto py-4">
-            <%- include("./partials/_add_btn.ejs") %>
-        </div>
+    <div class="">
+        <h3>Welcome <%= name %></h3>
     </div>
-
+    
     <div class="row p-0">
         <div class="col-12">
-            <hr>
+            <div class="row mb-0 p-0">
+                <div class="col">
+                    <br>
+                    <h4>My Stories</h4>
+                </div>
+                <div class="col-auto pb-2">
+                    <%- include("./partials/_add_btn.ejs") %>
+                </div>
+            </div>
+
+            <hr class="mt-0">
             <% if (stories.length > 0) { %>
                 <table class="table table-striped">
                     <thead class="thead-dark">
