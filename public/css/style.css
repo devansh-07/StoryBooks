@@ -1,0 +1,75 @@
+body {
+    background-color: whitesmoke;
+}
+
+p {
+    margin: 10px 0 !important;
+}
+
+td {
+    vertical-align: middle;
+}
+
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.login-container {
+    width: 400px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    padding: 12px 0px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.btn-circle-sm {
+    width: 40px;
+    height: 40px;
+    padding: 10px 0px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.fa-small {
+    font-size: 12px !important;
+}
+
+.bg-lightgrey {
+    background-color: #ededed;
+}
+
+.plain-anchor {
+    text-decoration: none;
+    color: steelblue;
+}
+
+.plain-anchor:hover {
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+.profile-tag div {
+    border-radius: 15px;
+}
+
+.profile-tag div img {
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+.profile-tag div a {
+    font-size: 14px;
+}

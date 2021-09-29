@@ -1,0 +1,58 @@
+<div class="mx-0">
+    <div class="row p-0">
+        <div class="col">
+            <h3>Welcome <%= name %></h3>
+            <h4>My Stories</h4>
+        </div>
+        <div class="col-auto py-4">
+            <%- include("./partials/_add_btn.ejs") %>
+        </div>
+    </div>
+
+    <div class="row p-0">
+        <div class="col-12">
+            <hr>
+            <% if (stories.length > 0) { %>
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Status</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% stories.forEach(story => { %>
+                            <tr>
+                                <td><a href="/stories/<%= story._id %>" class="plain-anchor"><%= story.title %></a></td>
+                                <td><%= story.createdAt.toLocaleString('en-US') %></td>
+                                <td><%= story.status %></td>
+                                <td class="py-2" style="vertical-align: middle;">
+                                    <div class="row p-0 m-0">
+                                        <div class="col p-0 m-0">
+                                            <a href="/stories/edit/<%= story._id %>" class="btn btn-sm btn-primary">
+                                                <i class="fa fa-edit fa-small"></i>
+                                            </a>
+                                        </div>
+
+                                        <div class="col p-0 m-0">
+                                            <form action="/stories/<%= story._id %>" method="POST">
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <button type="submit" class="btn btn-sm btn-danger">
+                                                    <i class="fa fa-trash fa-small"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+            <% } else { %>
+                <p class="text-center text-secondary">You don't have any story :(</p>
+            <% } %>
+        </div>
+    </div>
+</div>
